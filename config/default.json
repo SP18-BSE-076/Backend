@@ -1,4 +1,4 @@
 {
-  "db": "mongodb://localhost/productscrud",
+  "db": "mongodb+srv://hamza12345:12345@cluster0.rul2o.mongodb.net/productscrud?retryWrites=true&w=majority",
   "jwtPrivateKey": "SomePrivateKey"
 }
