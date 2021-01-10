@@ -44,7 +44,7 @@ router.post("/", validateProduct, auth, async (req, res) => {
   let product = new Product();
   product.name = req.body.name;
   product.price = req.body.price;
-  product.Link=req.body.Link;
+  product.Link = req.body.Link;
   await product.save();
   return res.send(product);
 });
