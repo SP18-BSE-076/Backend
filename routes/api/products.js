@@ -30,6 +30,7 @@ router.put("/:id", validateProduct, auth, admin, async (req, res) => {
   let product = await Product.findById(req.params.id);
   product.name = req.body.name;
   product.price = req.body.price;
+  product.Link = req.body.Link;
   await product.save();
   return res.send(product);
 });
@@ -43,6 +44,7 @@ router.post("/", validateProduct, auth, async (req, res) => {
   let product = new Product();
   product.name = req.body.name;
   product.price = req.body.price;
+  product.Link=req.body.Link;
   await product.save();
   return res.send(product);
 });
